@@ -1,21 +1,59 @@
+const { Decimal128 } = require('mongodb');
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    regno:{
-        type:String,
-        required:true,
-        unique:true
-    },
     name:{
         type:String,
         required: true
     },
     email:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
-    gender:String,
+    dob:{
+        type:Date,
+        required:true,
+    },
+    mobile:{
+        type:String,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    role:{
+        type:String,
+        required:true
+    },
+    regno:{
+        type:String,
+        required:true
+    },
+    university:{
+        type:String,
+        required:true
+    },
+    degree:{
+        type:String,
+        required:true
+    },
+    branch:{
+        type:String,
+        required:true
+    },
+    cgpa:{
+        type:Decimal128,
+        required:true
+    },
+    tenth:{
+        type:Decimal128,
+        required:true
+    },
+    highSchool:{
+        type:Decimal128,
+        required:true
+    }
 
 })
 

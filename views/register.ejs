@@ -180,13 +180,13 @@
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-   <title>Responsive Regisration Form </title>
+   <title>Register Yourself</title>
 </head>
 <body>
     <div class="container">
         <header>Registration</header>
 
-        <form action="#">
+        <form action="/api/create" method="post" enctype="multipart/form-data">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Personal Details</span>
@@ -194,41 +194,41 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Full Name</label>
-                            <input type="text" placeholder="Enter your name" required>
+                            <input type="text" name="name" placeholder="Enter your name" >
                         </div>
 
                         <div class="input-field">
                             <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
+                            <input type="date" name="dob" placeholder="Enter birth date" >
                         </div>
 
                         <div class="input-field">
                             <label>Email</label>
-                            <input type="text" placeholder="Enter your email" required>
+                            <input type="text" name="email" placeholder="Enter your email" >
                         </div>
 
                         <div class="input-field">
                             <label>Mobile Number</label>
-                            <input type="number" placeholder="Enter mobile number" required>
+                            <input type="text" name="mobile" placeholder="Enter mobile number" >
                         </div>
 
                         <div class="input-field">
                             <label>Gender</label>
-                            <select required>
+                            <select name="gender">
                                 <option disabled selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Others</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Applied Role</label>
-                            <select required>
+                            <select name="role">
                                 <option disabled selected>Select You Role</option>
-                                <option>Software Engineering</option>
-                                <option>Data Analyst</option>
-                                <option>Management Trainee</option>
+                                <option value="Software Engineering">Software Engineering</option>
+                                <option value="Data Analyst">Data Analyst</option>
+                                <option value="Management Trainee">Management Trainee</option>
                             </select>
                         </div>
                     </div>
@@ -240,53 +240,53 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Registration No.</label>
-                            <input type="number" placeholder="Enter Registration Number" required>
+                            <input type="text" name="regno" placeholder="Enter Registration Number" >
                         </div>
                         <div class="input-field">
                             <label>University/Institution</label>
-                            <select required>
+                            <select name="university">
                                 <option disabled selected>Recent Institution</option>
-                                <option>VIT,Vellore</option>
-                                <option>VIT,Chennai</option>
-                                <option>SRM</option>
-                                <option>Anna University</option>
-                                <option>IIT Madaras</option>
-                                <option>Shivaji University</option>
+                                <option value="VIT,Vellore">VIT,Vellore</option>
+                                <option value="VIT,Chennai">VIT,Chennai</option>
+                                <option value="SRM">SRM</option>
+                                <option value="Anna">Anna University</option>
+                                <option value="IIT Madaras">IIT Madaras</option>
+                                <option value="Shivaji University">Shivaji University</option>
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Degree</label>
-                            <select required>
+                            <select name="degree">
                                 <option disabled selected>Select You Degree</option>
-                                <option>B.Tech</option>
-                                <option>M.Tech</option>
-                                <option>PHD</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="M.Tech">M.Tech</option>
+                                <option value="PHD">PHD</option>
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Branch</label>
-                            <select required>
+                            <select name="branch">
                                 <option disabled selected>Select You Degree</option>
-                                <option>Computer Science and Engineering</option>
-                                <option>Information Technology</option>
+                                <option value="CSE">Computer Science and Engineering</option>
+                                <option value="IT">Information Technology</option>
                             </select>
                         </div>
                         <div class="input-field">
                             <label>CGPA</label>
-                            <input type="text" placeholder="UG CGPA" required>
+                            <input type="text" name="cgpa"placeholder="UG CGPA" >
                         </div>
                         <div class="input-field">
                             <label>10th Percentage</label>
-                            <input type="text" placeholder="Percentage only" required>
+                            <input type="text" name="tenth"placeholder="Percentage only" >
                         </div>
                         <div class="input-field">
                             <label>12th Percentage</label>
-                            <input type="text" placeholder="Pecentage Only" required>
+                            <input type="text" name="highSchool"placeholder="Pecentage Only" >
                         </div>
                             <label>Resume</label>
-                            <input type="file"required>
+                            <input type="file"name="resume">
                        
                 </div>
                 <button class="sumbit">

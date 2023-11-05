@@ -31,6 +31,12 @@ route.get('/rejected',(req,res)=>{
 route.get('/list',(req,res)=>{
     res.render('partials/list')
 })
+route.get('/view',(req,res)=>{
+    res.render('partials/view')
+})
+route.get('/error',(req,res)=>{
+    res.render('error');
+})
 
 
 //API
