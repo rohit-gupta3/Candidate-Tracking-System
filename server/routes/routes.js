@@ -1,6 +1,11 @@
 const express = require('express');
 const route = express.Router();
 
+const multer = require("multer");
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
 //const services = require('../services/render');
 
 
@@ -41,8 +46,8 @@ route.get('/error',(req,res)=>{
 
 //API
 const controller = require('../controller/controller');
-route.post('/api/create',controller.create)
-route.get('/api/find',controller.find)
+route.post('/api/create', upload.single('resume'), controller.create)
+route.get('/api/find/:id', controller.find)
 route.put('/api/accept',controller.accept)
 route.put('/api/reject',controller.reject)
 module.exports = route

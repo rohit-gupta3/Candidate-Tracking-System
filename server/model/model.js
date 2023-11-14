@@ -1,4 +1,4 @@
-const { Decimal128 } = require('mongodb');
+const { Decimal128, GridFSBucket, ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
@@ -53,8 +53,11 @@ var schema = new mongoose.Schema({
     highSchool:{
         type:Decimal128,
         required:true
+    },
+    resumeId : {
+        type: Buffer,
+        required: true
     }
-
 })
 
 const studentDB= mongoose.model('Student_Details',schema);
